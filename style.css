@@ -59,6 +59,7 @@ p {
 
 #block2 {
     align-items: center;
+    padding-inline: 2vh;
 }
 
 .rate-text {
@@ -104,7 +105,7 @@ main::before {
     bottom: 0;
 
     background-image: url(images/lines.jpg);
-    background-size: 121% auto;
+    background-size: auto;
     background-repeat: no-repeat;
     mix-blend-mode: multiply;
 
@@ -127,7 +128,7 @@ main::before {
 }
 
 .blocks {
-    width: 350pt;
+    width: clamp(350pt, 8vw, 350pt);
     justify-content: center;
     display: flex;
     margin: 10vh auto;
