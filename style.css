@@ -30,7 +30,8 @@ p {
     text-indent: 40px;
 }
 
-.rate-text {
+.rate-text,
+.block-rated__description {
     text-indent: 0;
 }
 
@@ -48,12 +49,16 @@ p {
 .block-rated__rate {
     margin-block: 30px;
     background-color: var(--Grey600);
-    width: 60%;
+    margin-inline: auto;
     align-items: center;
     display: flex;
     justify-content: center;
     border-radius: 30px;
-    padding-block: 10px;
+    padding: 1.7vh;
+}
+
+#block2 {
+    align-items: center;
 }
 
 .rate-text {
@@ -83,32 +88,72 @@ button {
 main {
     background-color: var(--Grey950);
     min-height: 100vh;
-    min-width: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
 
 }
 
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-image: url(images/lines.jpg);
+    background-size: 121% auto;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+
+    z-index: -1;
+}
+
 .block {
-    background-color: var(--Grey900);
-    width: 420px;
-    display: flex;
     border-radius: 40px;
-    padding: 40px;
-    display: block;
-    width: 100%;
+    padding: 30pt;
+    box-sizing: initial;
+    display: grid;
+    z-index: 3;
+
 }
 
 .main-element {
     padding: 1vh;
+    display: flex;
+    align-items: center;
 }
 
 .blocks {
-
-    background-color: var(--Grey900);
-    width: 420px;
+    width: 350pt;
+    justify-content: center;
     display: flex;
-    margin: 60px auto;
+    margin: 10vh auto;
     max-width: 90%;
     border-radius: 40px;
+    z-index: 2;
+    position: relative;
+    background-color: var(--Grey900);
+
+}
+
+.submit-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    rotate: 180deg;
+    background-image: url(images/lines.jpg);
+    border-radius: 40px;
+    background-size: 150%;
+    opacity: .1;
+    background-position: center;
+    mix-blend-mode: darken;
+    z-index: 2;
 }
 
 .disabled {
@@ -131,8 +176,8 @@ main {
 }
 
 .rate-btn {
-    width: 55px;
-    height: 55px;
+    width: clamp(48px, 8vw, 60px);
+    height: clamp(48px, 8vw, 60px);
     align-items: center;
     align-content: center;
     justify-content: center;
@@ -156,7 +201,7 @@ main {
 }
 
 [class$="-title"] h5 {
-    font-size: 34px;
+    font-size: 30px;
     margin-bottom: 10px;
 }
 
@@ -167,6 +212,7 @@ main {
     justify-content: center;
     border-radius: 50px;
     align-items: center;
+    position: relative;
     cursor: pointer;
 }
 
