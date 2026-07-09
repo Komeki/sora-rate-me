@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate me, Sora!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <main>
+        <div class="main-element">
+            <div class="blocks">
+                <div class="block" id="block-q">
+                    <div class="block-question">
+                        <img src="images/icon-star.svg" alt="icon-star" class="star">
+                        <div class="question-title">
+                            <h5>Just rate yo &lt;3</h5>
+                        </div>
+
+                        <div class="expandable-wrapper">
+                            <div class="expandable-content" id="textContent">
+                                <p class="textContent">Я в своем фронтенде настолько преисполнился, что я как будто бы уже сто триллионов
+                                    миллиардов
+                                    строк кода отрефакторил на триллионах таких же проектов, как этот.</p>
+
+                                <p>Мне этот DOM абсолютно понятен, и я здесь ищу только одного — покоя, умиротворения и
+                                    вот
+                                    этой
+                                    гармонии от идеального слияния HTML и CSS без единого !important, от созерцания
+                                    чистого
+                                    компонентного подобия и от вот этого замечательного всеединства Event Loop'а.</p>
+
+                                <p>Куда ни посмотри, хоть вглубь — бесконечные микротаски и замыкания, хоть ввысь —
+                                    глобальный
+                                    объект Window, понимаешь?</p>
+
+                                <p>А ты мне опять со своим вот этим «какой фреймворк выбрать», иди суетись дальше,
+                                    центрируй
+                                    дивы марджинами.</p>
+
+                                <p>Это твой путь и твой горизонт познания джаваскрипта, он несоизмеримо мелок по
+                                    сравнению с
+                                    моим, понимаешь?</p>
+
+                                <p>Я как будто бы уже давно глубокий Senior, бессмертный, ну или там уже почти техлид,
+                                    который в
+                                    этом вебе от его самого зарождения.</p>
+
+                                <p>Ещё когда только Netscape только-только сформировался как браузер, и вот эта верстка
+                                    таблицами, вот, после релиза ES6, когда он вспыхнул, как стандарт, начал формировать
+                                    вот
+                                    эти
+                                    SPA, Shadow DOM, хуки, понимаешь?</p>
+
+                                <p>Я в этом вебе уже как будто почти с версии HTML 1.0 живу и знаю его вдоль и поперёк,
+                                    весь
+                                    этот рантайм...</p>
+
+                                <p>А ты мне какие-то... мне не важно на твои новые бандлеры, на твой Tailwind, на твои
+                                    CSS-in-JS
+                                    анимации, там, на твои фичи.</p>
+                            </div>
+
+                            <button class="expand-btn" id="expandBtn">
+                                <span class="btn-text">Развернуть</span>
+                                <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="rate-buttons">
+                            <button class="rate-btn">
+                                <div class="rate-btn-text">1</div>
+                            </button>
+                            <button class="rate-btn">
+                                <div class="rate-btn-text">2</div>
+                            </button>
+                            <button class="rate-btn">
+                                <div class="rate-btn-text">3</div>
+                            </button>
+                            <button class="rate-btn">
+                                <div class="rate-btn-text">4</div>
+                            </button>
+                            <button class="rate-btn">
+                                <div class="rate-btn-text">5</div>
+                            </button>
+
+                        </div>
+                        <button class="submit-btn" id="submit-btn">SUBMIT</button>
+                    </div>
+                </div>
+                <div class="block disabled">
+                    <div class="block-rated">
+                        <div class="img">
+                            <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js"
+                                type="module"></script>
+                            <dotlottie-wc
+                                src="https://lottie.host/c9efff98-0ef9-4ded-b284-9f50a32bead1/80mnYMEXaF.lottie"
+                                autoplay loop></dotlottie-wc>
+                        </div>
+                        <div class="block-rated__rate">
+                            <p class="rate-text" id="rate-text"></p>
+                        </div>
+                        <div class="question-title">
+                            <h5 class="block-rated-title">Thanks</h5>
+                        </div>
+                        <p class="block-rated__description">больше спасибо спасибо большое это важно <br> спасибо
+                            спасибо
+                            спасибо <br>спасибо</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </main>
+</body>
+
+</html>

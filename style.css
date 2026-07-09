@@ -1,0 +1,219 @@
+:root {
+    --White: hsl(0, 100%, 100%);
+    --Grey500: hsl(217, 12%, 63%);
+    --Grey600: hsl(215, 9%, 25%);
+    --Grey900: hsl(213, 19%, 18%);
+    --Grey950: hsl(216, 12%, 8%);
+    --orange: #fc7616;
+    --orange100: #fb832e;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: Overpass;
+    color: white;
+    font-size: 15px;
+}
+
+.star {
+    background-color: var(--Grey600);
+    border-radius: 50px;
+    padding: 15px;
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    display: inline-block;
+    text-indent: 40px;
+}
+
+.rate-text {
+    text-indent: 0;
+}
+
+.img {
+    display: flex;
+}
+
+.block-rated {
+    display: block;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.block-rated__rate {
+    margin-block: 30px;
+    background-color: var(--Grey600);
+    width: 60%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    padding-block: 10px;
+}
+
+.rate-text {
+    color: var(--orange);
+    top: 1px;
+    position: relative;
+}
+
+.rate-btn-text {
+    position: relative;
+    top: 1px;
+    color: inherit;
+
+}
+
+p,
+button {
+    color: var(--Grey500);
+}
+
+button {
+    display: flex;
+    background-color: var(--Grey900);
+    height: 50px;
+}
+
+main {
+    background-color: var(--Grey950);
+    min-height: 100vh;
+    min-width: 100%;
+
+}
+
+.block {
+    background-color: var(--Grey900);
+    width: 420px;
+    display: flex;
+    border-radius: 40px;
+    padding: 40px;
+    display: block;
+    width: 100%;
+}
+
+.main-element {
+    padding: 1vh;
+}
+
+.blocks {
+
+    background-color: var(--Grey900);
+    width: 420px;
+    display: flex;
+    margin: 60px auto;
+    max-width: 90%;
+    border-radius: 40px;
+}
+
+.disabled {
+    display: none;
+}
+
+/* выравнивание текста + перенос слов */
+#textContent {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    text-align: justify;
+    overflow-wrap: break-word;
+}
+
+.rate-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.rate-btn {
+    width: 55px;
+    height: 55px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border-radius: 28px;
+    background-color: var(--Grey600);
+}
+
+.active {
+    background-color: var(--orange);
+    color: var(--Grey950);
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.rate-btn:hover {
+    transition: all .3s;
+    background-color: white;
+    color: var(--Grey950);
+    cursor: pointer;
+    align-items: center;
+}
+
+[class$="-title"] h5 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.submit-btn {
+    background-color: var(--orange);
+    color: var(--Grey950);
+    width: 100%;
+    justify-content: center;
+    border-radius: 50px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #fb832e;
+    cursor: pointer;
+}
+
+/* РАССКРЫТИЕ СКРЫТОГО ТЕКСТА */
+.expandable-wrapper {
+    position: relative;
+    padding-bottom: 0;
+}
+
+.expandable-content {
+    max-height: 270px;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black calc(100% - 60px), transparent 100%);
+    mask-image: linear-gradient(to bottom, black 0%, black calc(100% - 100px), transparent 100%);
+}
+
+.expand-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #0066cc;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.arrow-icon {
+    transition: transform 0.4s ease-out;
+}
+
+/* ОТКРЫТОЕ СОСТОЯНИЕ */
+.expandable-wrapper.is-open .expandable-content {
+    /* Когда блок открыт, мы "закрашиваем" маску полностью черным, чтобы нижний текст не был прозрачным */
+    -webkit-mask-image: linear-gradient(to bottom, black 100%, black 100%);
+    mask-image: linear-gradient(to bottom, black 100%, black 100%);
+}
+
+.expandable-wrapper.is-open .arrow-icon {
+    transform: rotate(180deg);
+}
